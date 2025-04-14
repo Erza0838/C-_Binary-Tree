@@ -10,28 +10,27 @@ struct NodeElement
 class LeafNode 
 {
   public: 
-    int InsertLeafNode() 
+    void InsertLeafNode() 
     {
-      cout << "Maskkan leaf node  : ";
-      cin >> NodeElementStruct.RootNodeValue;
+      cout << "Masukkan parent node  : ";
+      cin >> NodeElementStruct.ParentNodeValue;
     }
 };
 
 class RootNode
 {
   public: 
-    int InsertRootNode() 
+    void InsertRootNode() 
     {
-      cout << "Maskkan root node  : ";
+      cout << "Masukkan root node  : ";
       cin >> NodeElementStruct.RootNodeValue;
-      switch(NodeElementStruct.RootNodeValue)
-      {
-        case !NULL : 
-        {
-          LeafNode leafNode;
-          leafNode.InsertLeafNode();
-        }
-      }
+      cout << "Root node : " << NodeElementStruct.RootNodeValue << endl;
+      // if(sizeof(NodeElementStruct.RootNodeValue) > 0)
+      // {
+      //   cout << "Root node : " + NodeElementStruct.RootNodeValue << endl;
+      //     // LeafNode leafNode;
+      //     // leafNode.InsertLeafNode();
+      // }
     }
 };
 
